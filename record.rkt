@@ -146,9 +146,8 @@
 (:= man x 11)
 man
 
-(begin ; let ()
-  (define enemy (sprite 11 12 'enemy-bitmap))
-  (dot enemy x)
-  ;(:= enemy x 21)
-  #;(list enemy (dot enemy x)))
+(define enemy (sprite 11 12 'enemy-bitmap))
+
+(dot enemy x) ; this expressions gives the wrong error
+              ; I was hoping for a "identifier not declared" error
 
